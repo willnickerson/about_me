@@ -86,3 +86,9 @@ if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
   alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
   console.log('The user is not following instructions :(');
 }
+
+if (counter >= 3) {
+  alert('You did great! I would be happy to call you a friend :-).');
+} else {
+  alert('You did poorly. Please leave my page :-(');
+}
