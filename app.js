@@ -87,8 +87,11 @@ if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
   console.log('The user is not following instructions :(');
 }
 
+var score = counter / 5;
 if (counter >= 3) {
   alert('You did great! I would be happy to call you a friend :-).');
+  console.log('The user did well answering the questions. Their score is ' + score);
 } else {
   alert('You did poorly. Please leave my page :-(');
+  console.log('The user did poorly answering the questions. Their score is  ' + score);
 }
