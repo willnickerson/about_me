@@ -2,6 +2,8 @@
 
 alert('Hi! My name is Will. Please take a moment to read the directions on my page :-).');
 
+var counter = 0; /* This var will tally the user's score */
+
 /* First Question */
 var anotherCupAnswer = prompt('Would you like another cup of coffee (yes or no)?');
 anotherCupAnswer = anotherCupAnswer.toUpperCase();
@@ -9,6 +11,7 @@ anotherCupAnswer = anotherCupAnswer.toUpperCase();
 if (anotherCupAnswer === 'YES' || anotherCupAnswer === 'Y') {
   alert('Good descision! You\'ll need one because there are still more questions to come...');
   console.log(anotherCupAnswer + ', the user would like another cup.');
+  counter++;
 } else if (anotherCupAnswer === 'NO' || anotherCupAnswer === 'N') {
   alert('Ewww wrong answer, you still have four more questions.');
   console.log('The user does not want another cup :(');
@@ -28,6 +31,7 @@ if (treeAnswer === 'YES' || treeAnswer === 'Y') {
 } else if (treeAnswer === 'NO' || treeAnswer === 'N') {
   alert('You are correct!');
   console.log('The user is correct.');
+  counter++;
 } else {
   alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
   console.log('The user is not following instructions :(');
@@ -43,6 +47,7 @@ if (meatAnswer === 'YES' || meatAnswer === 'Y') {
 } else if (meatAnswer === 'NO' || meatAnswer === 'N') {
   alert('Right on! You might just know a thing or two.');
   console.log('The user is correct');
+  counter++;
 } else {
   alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
   console.log('The user is not following instructions :(');
@@ -56,6 +61,7 @@ webAnswer = webAnswer.toUpperCase();
 if (webAnswer === 'YES' || webAnswer === 'Y') {
   alert('Of course! Im sure this page is a good indicator ;)');
   console.log('The user is correct and aware of my web development abilities.');
+  counter++;
 } else if (webAnswer === 'NO' || webAnswer === 'N') {
   alert('No?! are you seeing this page. Its pretty good right?');
   console.log('The user is clearly wrong.');
@@ -75,6 +81,7 @@ if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
 } else if (smokeAnswer === 'NO' || smokeAnswer === 'N') {
   alert('Sadly you are correct :-( unfortunately I am stuck inside of a computer. Thanks for taking the time to chat with me.');
   console.log('The user is correct.');
+  counter++;
 } else {
   alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
   console.log('The user is not following instructions :(');
