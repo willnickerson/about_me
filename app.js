@@ -1,6 +1,8 @@
 'use strict';
 
 alert('Hi! My name is Will. Please take a moment to read the directions on my page :-).');
+
+/* First Question */
 var anotherCupAnswer = prompt('Would you like another cup of coffee (yes or no)?');
 anotherCupAnswer = anotherCupAnswer.toUpperCase();
 
@@ -15,7 +17,7 @@ if (anotherCupAnswer === 'YES' || anotherCupAnswer === 'Y') {
   console.log('The user is not following instructions :(');
 }
 
-
+/* Second Question */
 var treeAnswer = prompt('If a tree falls in a forest and I\'m not around to hear it, does it still make a sound?');
 
 treeAnswer = treeAnswer.toUpperCase();
@@ -31,6 +33,7 @@ if (treeAnswer === 'YES' || treeAnswer === 'Y') {
   console.log('The user is not following instructions :(');
 }
 
+/* Third Question */
 var meatAnswer = prompt('Is beef my favorite meat?');
 meatAnswer = meatAnswer.toUpperCase();
 
@@ -45,6 +48,7 @@ if (meatAnswer === 'YES' || meatAnswer === 'Y') {
   console.log('The user is not following instructions :(');
 }
 
+/* Fourth Question */
 var webAnswer = prompt('Will I build the raddest site ever oneday???');
 
 webAnswer = webAnswer.toUpperCase();
@@ -60,6 +64,7 @@ if (webAnswer === 'YES' || webAnswer === 'Y') {
   console.log('The user is not following instructions :(');
 }
 
+/* Fifth Question */
 var smokeAnswer = prompt('Am I going to take a smoke break after you answer this last question?');
 
 smokeAnswer = smokeAnswer.toUpperCase();
