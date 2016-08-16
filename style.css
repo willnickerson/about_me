@@ -1,0 +1,35 @@
+*{
+  outline: dotted red;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 0 auto;
+  padding: 50px;
+  font-family: fantasy;
+  color: red;
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  font-family: monospace;
+  color: red;
+  padding: 20px;
+}
+
+
+img {
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
