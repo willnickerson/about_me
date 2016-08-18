@@ -7,23 +7,25 @@ var counter = 0; /* This var will tally the user's score */
 
 
 
-
+function firstQuestion() {
 /* First Question */
-var anotherCupAnswer = prompt('Would you like another cup of coffee (yes or no)?');
-anotherCupAnswer = anotherCupAnswer.toUpperCase();
+  var anotherCupAnswer = prompt('Would you like another cup of coffee (yes or no)?');
+  anotherCupAnswer = anotherCupAnswer.toUpperCase();
 
-if (anotherCupAnswer === 'YES' || anotherCupAnswer === 'Y') {
-  alert('Good descision! You\'ll need one because there are still more questions to come...');
-  console.log(anotherCupAnswer + ', the user would like another cup.');
-  counter++;
-} else if (anotherCupAnswer === 'NO' || anotherCupAnswer === 'N') {
-  alert('Ewww wrong answer, you still have four more questions.');
-  console.log('The user does not want another cup :(');
-} else {
-  alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
-  console.log('The user is not following instructions :(');
+  if (anotherCupAnswer === 'YES' || anotherCupAnswer === 'Y') {
+    alert('Good descision! You\'ll need one because there are still more questions to come...');
+    console.log(anotherCupAnswer + ', the user would like another cup.');
+    counter++;
+  } else if (anotherCupAnswer === 'NO' || anotherCupAnswer === 'N') {
+    alert('Ewww wrong answer, you still have four more questions.');
+    console.log('The user does not want another cup :(');
+  } else {
+    alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
+    console.log('The user is not following instructions :(');
+  }
 }
 
+firstQuestion();
 /* Second Question */
 var treeAnswer = prompt('If a tree falls in a forest and I\'m not around to hear it, does it still make a sound?');
 
