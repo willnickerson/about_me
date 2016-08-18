@@ -52,22 +52,24 @@ function secondQuestion() {
 
 secondQuestion();
 
-
+function thirdQuestion() {
 /* Third Question */
-var meatAnswer = prompt('Is beef my favorite meat?');
-meatAnswer = meatAnswer.toUpperCase();
+  var meatAnswer = prompt('Is beef my favorite meat?');
+  meatAnswer = meatAnswer.toUpperCase();
 
-if (meatAnswer === 'YES' || meatAnswer === 'Y') {
-  alert('Nah it used to be, but pork is where it\'s at!');
-  console.log('The user does not know my favorite meat :(');
-} else if (meatAnswer === 'NO' || meatAnswer === 'N') {
-  alert('Right on! You might just know a thing or two.');
-  console.log('The user is correct');
-  counter++;
-} else {
-  alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
-  console.log('The user is not following instructions :(');
+  if (meatAnswer === 'YES' || meatAnswer === 'Y') {
+    alert('Nah it used to be, but pork is where it\'s at!');
+    console.log('The user does not know my favorite meat :(');
+  } else if (meatAnswer === 'NO' || meatAnswer === 'N') {
+    alert('Right on! You might just know a thing or two.');
+    console.log('The user is correct');
+    fxnCounter();
+  } else {
+    alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
+    console.log('The user is not following instructions :(');
+  }
 }
+thirdQuestion();
 
 /* Fourth Question */
 var webAnswer = prompt('Will I build the raddest site ever oneday???');
