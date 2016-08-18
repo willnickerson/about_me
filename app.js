@@ -8,25 +8,15 @@ function fxnCounter () {
   counter += 1; /* This var will tally the user's score */
 }
 
-fxnCounter();
-
-function firstQuestion() {
 /* First Question */
-<<<<<<< HEAD
 function firstQuestion() {
-=======
->>>>>>> 45afe082becbca37afa157020301e385e32d836f
   var anotherCupAnswer = prompt('Would you like another cup of coffee (yes or no)?');
   anotherCupAnswer = anotherCupAnswer.toUpperCase();
 
   if (anotherCupAnswer === 'YES' || anotherCupAnswer === 'Y') {
     alert('Good descision! You\'ll need one because there are still more questions to come...');
     console.log(anotherCupAnswer + ', the user would like another cup.');
-<<<<<<< HEAD
-    counter++;
-=======
     fxnCounter();
->>>>>>> 45afe082becbca37afa157020301e385e32d836f
   } else if (anotherCupAnswer === 'NO' || anotherCupAnswer === 'N') {
     alert('Ewww wrong answer, you still have four more questions.');
     console.log('The user does not want another cup :(');
@@ -37,14 +27,6 @@ function firstQuestion() {
 }
 
 firstQuestion();
-<<<<<<< HEAD
-
-
-/* Second Question */
-var treeAnswer = prompt('If a tree falls in a forest and I\'m not around to hear it, does it still make a sound?');
-=======
->>>>>>> 45afe082becbca37afa157020301e385e32d836f
-
 
 function secondQuestion() {
 /* Second Question */
