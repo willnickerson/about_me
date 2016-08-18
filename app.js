@@ -2,10 +2,13 @@
 
 alert('Hi! My name is Will. Please take a moment to read the directions on my page :-).');
 
-var counter = 0; /* This var will tally the user's score */
+var counter = 0;
 
+function fxnCounter () {
+  counter += 1; /* This var will tally the user's score */
+}
 
-
+fxnCounter();
 
 function firstQuestion() {
 /* First Question */
@@ -15,7 +18,7 @@ function firstQuestion() {
   if (anotherCupAnswer === 'YES' || anotherCupAnswer === 'Y') {
     alert('Good descision! You\'ll need one because there are still more questions to come...');
     console.log(anotherCupAnswer + ', the user would like another cup.');
-    counter++;
+    fxnCounter();
   } else if (anotherCupAnswer === 'NO' || anotherCupAnswer === 'N') {
     alert('Ewww wrong answer, you still have four more questions.');
     console.log('The user does not want another cup :(');
@@ -26,22 +29,29 @@ function firstQuestion() {
 }
 
 firstQuestion();
+
+
+function secondQuestion() {
 /* Second Question */
-var treeAnswer = prompt('If a tree falls in a forest and I\'m not around to hear it, does it still make a sound?');
+  var treeAnswer = prompt('If a tree falls in a forest and I\'m not around to hear it, does it still make a sound?');
 
-treeAnswer = treeAnswer.toUpperCase();
+  treeAnswer = treeAnswer.toUpperCase();
 
-if (treeAnswer === 'YES' || treeAnswer === 'Y') {
-  alert('No that\'s absurd! How could it make a sound if I\'m not arround to hear it.');
-  console.log('The user is incorrect');
-} else if (treeAnswer === 'NO' || treeAnswer === 'N') {
-  alert('You are correct!');
-  console.log('The user is correct.');
-  counter++;
-} else {
-  alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
-  console.log('The user is not following instructions :(');
+  if (treeAnswer === 'YES' || treeAnswer === 'Y') {
+    alert('No that\'s absurd! How could it make a sound if I\'m not arround to hear it.');
+    console.log('The user is incorrect');
+  } else if (treeAnswer === 'NO' || treeAnswer === 'N') {
+    alert('You are correct!');
+    console.log('The user is correct.');
+    fxnCounter();
+  } else {
+    alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
+    console.log('The user is not following instructions :(');
+  }
 }
+
+secondQuestion();
+
 
 /* Third Question */
 var meatAnswer = prompt('Is beef my favorite meat?');
