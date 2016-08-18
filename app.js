@@ -4,6 +4,10 @@ alert('Hi! My name is Will. Please take a moment to read the directions on my pa
 
 var counter = 0; /* This var will tally the user's score */
 
+
+
+
+
 /* First Question */
 var anotherCupAnswer = prompt('Would you like another cup of coffee (yes or no)?');
 anotherCupAnswer = anotherCupAnswer.toUpperCase();
@@ -87,11 +91,87 @@ if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
   console.log('The user is not following instructions :(');
 }
 
-var score = counter / 5;
-if (counter >= 3) {
-  alert('You did great! I would be happy to call you a friend :-).');
+//random number question
+
+var randomNum = Math.floor(Math.random() * 11);
+
+console.log('This is how many cups I\'ve had today: ' + randomNum);
+
+var userGuess = prompt('Can you guess how many cups of cofee I\'ve had today? I\'ll give you a hint. Its between 0 and 10, and I\'ll give you four tries. Good luck! ');
+
+userGuess = Number(userGuess);
+
+for(var i = 0; i < 4; i++) {
+  if (userGuess === randomNum) {
+    console.log('The user has guessed correctly. The loop should stop');
+    alert('You\'re right!');
+    i = 4; //this should stop the loop from running after they guess correctly
+    counter++;
+  }
+  else {
+    console.log('The user\'s guess is wrong.');
+    if (userGuess > randomNum) {
+      alert('Sorry your guess was to high.');
+    } else {
+      alert('Sorry your guess was too low.');
+    }
+
+    var tries = 3 - i; //this variable will be used to inform user of how many tries they have left.
+    tries = tries.toString();
+
+    if (i < 2) {
+      userGuess = prompt('Guess again! You have ' + tries + ' more tries.');
+    } else if (i === 2) {
+      userGuess = prompt('Guess again! This is your last chance...');
+    } else {
+      alert('Too bad :-(. You are all out of guesses.');
+    }
+    userGuess = Number(userGuess);
+    console.log('The user\'s new guess is: ', userGuess);
+  }
+}
+
+// Array question
+var states = ['north carolina', 'iowa', 'california', 'nc', 'ia', 'ca'];
+
+
+userGuess = prompt('What states have I lived in other than Oregon? I\'ll give you six tries to guess (also feel free to use abreviations)!');
+
+console.log('The user has guessed:' + userGuess);
+
+for(var j = 0; j < 6; j++){
+  userGuess = userGuess.toLowerCase();
+  console.log(userGuess);
+  for( i = 0; i < states.length; i++) {
+    if (userGuess === states[i]) {
+      console.log('The user is correct');
+      alert('Correct! I have lived in: North Carolina, Iowa, and California.');
+      i = states.length;
+      j = 6;
+      counter++;
+    }
+  }
+  console.log('The user is incorrect');
+  if(j < 4){
+    tries = 5 - j;
+    tries = tries.toString();
+    userGuess = prompt('Good try! Guess again. You have ' + tries + ' more guesses.' );
+    console.log('The user has guessed:' + userGuess);
+  } else if(j === 4) {
+    userGuess = prompt('Nice try! I\'ll give you one more.');
+    console.log('The user has guessed:' + userGuess);
+  } else if(j === 5) {
+    alert('Sorry, you are all out of guesses.');
+  }
+}
+
+
+var score = (counter / 7) * 100;
+score = score.toString();
+if (counter >= 4) {
+  alert('You did great! I would be happy to call you a friend :-). You scored ' + score + '%');
   console.log('The user did well answering the questions. Their score is ' + score);
 } else {
-  alert('You did poorly. Please leave my page :-(');
-  console.log('The user did poorly answering the questions. Their score is  ' + score);
+  alert('You did poorly. You scored ' + score + '%. Please leave my page :-(');
+  console.log('The user did poorly answering the questions. Their score is  ' + score + '%');
 }
