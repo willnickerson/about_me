@@ -71,23 +71,26 @@ function thirdQuestion() {
 }
 thirdQuestion();
 
+function fourthQuestion() {
 /* Fourth Question */
-var webAnswer = prompt('Will I build the raddest site ever oneday???');
+  var webAnswer = prompt('Will I build the raddest site ever oneday???');
 
-webAnswer = webAnswer.toUpperCase();
+  webAnswer = webAnswer.toUpperCase();
 
-if (webAnswer === 'YES' || webAnswer === 'Y') {
-  alert('Of course! Im sure this page is a good indicator ;)');
-  console.log('The user is correct and aware of my web development abilities.');
-  counter++;
-} else if (webAnswer === 'NO' || webAnswer === 'N') {
-  alert('No?! are you seeing this page. Its pretty good right?');
-  console.log('The user is clearly wrong.');
-} else {
-  alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
-  console.log('The user is not following instructions :(');
+  if (webAnswer === 'YES' || webAnswer === 'Y') {
+    alert('Of course! Im sure this page is a good indicator ;)');
+    console.log('The user is correct and aware of my web development abilities.');
+    fxnCounter();
+  } else if (webAnswer === 'NO' || webAnswer === 'N') {
+    alert('No?! are you seeing this page. Its pretty good right?');
+    console.log('The user is clearly wrong.');
+  } else {
+    alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
+    console.log('The user is not following instructions :(');
+  }
 }
 
+fourthQuestion();
 /* Fifth Question */
 var smokeAnswer = prompt('Am I going to take a smoke break after you answer this last question?');
 
