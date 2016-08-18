@@ -113,46 +113,50 @@ function fifthQuestion() {
 
 fifthQuestion();
 
+
+function sixthQuestion() {
 //random number question
 
-var randomNum = Math.floor(Math.random() * 11);
+  var randomNum = Math.floor(Math.random() * 11);
 
-console.log('This is how many cups I\'ve had today: ' + randomNum);
+  console.log('This is how many cups I\'ve had today: ' + randomNum);
 
-var userGuess = prompt('Can you guess how many cups of cofee I\'ve had today? I\'ll give you a hint. Its between 0 and 10, and I\'ll give you four tries. Good luck! ');
+  var userGuess = prompt('Can you guess how many cups of cofee I\'ve had today? I\'ll give you a hint. Its between 0 and 10, and I\'ll give you four tries. Good luck! ');
 
-userGuess = Number(userGuess);
+  userGuess = Number(userGuess);
 
-for(var i = 0; i < 4; i++) {
-  if (userGuess === randomNum) {
-    console.log('The user has guessed correctly. The loop should stop');
-    alert('You\'re right!');
-    i = 4; //this should stop the loop from running after they guess correctly
-    counter++;
-  }
-  else {
-    console.log('The user\'s guess is wrong.');
-    if (userGuess > randomNum) {
-      alert('Sorry your guess was to high.');
-    } else {
-      alert('Sorry your guess was too low.');
+  for(var i = 0; i < 4; i++) {
+    if (userGuess === randomNum) {
+      console.log('The user has guessed correctly. The loop should stop');
+      alert('You\'re right!');
+      i = 4; //this should stop the loop from running after they guess correctly
+      fxnCounter();
     }
+    else {
+      console.log('The user\'s guess is wrong.');
+      if (userGuess > randomNum) {
+        alert('Sorry your guess was to high.');
+      } else {
+        alert('Sorry your guess was too low.');
+      }
 
-    var tries = 3 - i; //this variable will be used to inform user of how many tries they have left.
-    tries = tries.toString();
+      var tries = 3 - i; //this variable will be used to inform user of how many tries they have left.
+      tries = tries.toString();
 
-    if (i < 2) {
-      userGuess = prompt('Guess again! You have ' + tries + ' more tries.');
-    } else if (i === 2) {
-      userGuess = prompt('Guess again! This is your last chance...');
-    } else {
-      alert('Too bad :-(. You are all out of guesses.');
+      if (i < 2) {
+        userGuess = prompt('Guess again! You have ' + tries + ' more tries.');
+      } else if (i === 2) {
+        userGuess = prompt('Guess again! This is your last chance...');
+      } else {
+        alert('Too bad :-(. You are all out of guesses.');
+      }
+      userGuess = Number(userGuess);
+      console.log('The user\'s new guess is: ', userGuess);
     }
-    userGuess = Number(userGuess);
-    console.log('The user\'s new guess is: ', userGuess);
   }
 }
 
+sixthQuestion();
 // Array question
 var states = ['north carolina', 'iowa', 'california', 'nc', 'ia', 'ca'];
 
