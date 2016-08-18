@@ -91,22 +91,27 @@ function fourthQuestion() {
 }
 
 fourthQuestion();
+
+function fifthQuestion() {
 /* Fifth Question */
-var smokeAnswer = prompt('Am I going to take a smoke break after you answer this last question?');
+  var smokeAnswer = prompt('Am I going to take a smoke break after you answer this last question?');
 
-smokeAnswer = smokeAnswer.toUpperCase();
+  smokeAnswer = smokeAnswer.toUpperCase();
 
-if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
-  alert('No I can\'t :( Thanks for reminding me that I\'m trapped inside of a computer. Nevertheless, I appreciate you taking the time to talk with me');
-  console.log('The user is incorrect.');
-} else if (smokeAnswer === 'NO' || smokeAnswer === 'N') {
-  alert('Sadly you are correct :-( unfortunately I am stuck inside of a computer. Thanks for taking the time to chat with me.');
-  console.log('The user is correct.');
-  counter++;
-} else {
-  alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
-  console.log('The user is not following instructions :(');
+  if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
+    alert('No I can\'t :( Thanks for reminding me that I\'m trapped inside of a computer. Nevertheless, I appreciate you taking the time to talk with me');
+    console.log('The user is incorrect.');
+  } else if (smokeAnswer === 'NO' || smokeAnswer === 'N') {
+    alert('Sadly you are correct :-( unfortunately I am stuck inside of a computer. Thanks for taking the time to chat with me.');
+    console.log('The user is correct.');
+    fxnCounter();
+  } else {
+    alert('I don\'t understand your answer and don\'t have time for someone who doesn\'t bother to read instructions');
+    console.log('The user is not following instructions :(');
+  }
 }
+
+fifthQuestion();
 
 //random number question
 
