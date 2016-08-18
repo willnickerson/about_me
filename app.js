@@ -158,38 +158,43 @@ function sixthQuestion() {
 
 sixthQuestion();
 // Array question
-var states = ['north carolina', 'iowa', 'california', 'nc', 'ia', 'ca'];
+
+function seventhQuestion() {
+
+  var states = ['north carolina', 'iowa', 'california', 'nc', 'ia', 'ca'];
 
 
-userGuess = prompt('What states have I lived in other than Oregon? I\'ll give you six tries to guess (also feel free to use abreviations)!');
+  var userGuess = prompt('What states have I lived in other than Oregon? I\'ll give you six tries to guess (also feel free to use abreviations)!');
 
-console.log('The user has guessed:' + userGuess);
+  console.log('The user has guessed:' + userGuess);
 
-for(var j = 0; j < 6; j++){
-  userGuess = userGuess.toLowerCase();
-  console.log(userGuess);
-  for( i = 0; i < states.length; i++) {
-    if (userGuess === states[i]) {
-      console.log('The user is correct');
-      alert('Correct! I have lived in: North Carolina, Iowa, and California.');
-      i = states.length;
-      j = 6;
-      counter++;
+  for(var j = 0; j < 6; j++){
+    userGuess = userGuess.toLowerCase();
+    console.log(userGuess);
+    for(var i = 0; i < states.length; i++) {
+      if (userGuess === states[i]) {
+        console.log('The user is correct');
+        alert('Correct! I have lived in: North Carolina, Iowa, and California.');
+        i = states.length;
+        j = 6;
+        fxnCounter();
+      }
+    }
+    console.log('The user is incorrect');
+    if(j < 4){
+      var tries = 5 - j;
+      tries = tries.toString();
+      userGuess = prompt('Good try! Guess again. You have ' + tries + ' more guesses.' );
+      console.log('The user has guessed:' + userGuess);
+    } else if(j === 4) {
+      userGuess = prompt('Nice try! I\'ll give you one more.');
+      console.log('The user has guessed:' + userGuess);
+    } else if(j === 5) {
+      alert('Sorry, you are all out of guesses.');
     }
   }
-  console.log('The user is incorrect');
-  if(j < 4){
-    tries = 5 - j;
-    tries = tries.toString();
-    userGuess = prompt('Good try! Guess again. You have ' + tries + ' more guesses.' );
-    console.log('The user has guessed:' + userGuess);
-  } else if(j === 4) {
-    userGuess = prompt('Nice try! I\'ll give you one more.');
-    console.log('The user has guessed:' + userGuess);
-  } else if(j === 5) {
-    alert('Sorry, you are all out of guesses.');
-  }
 }
+seventhQuestion();
 
 
 var score = (counter / 7) * 100;
