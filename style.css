@@ -26,11 +26,9 @@ h1 {
   text-align: center;
   text-decoration: underline;
   margin: 0 auto;
-  padding: 25px 50px 0 50px;
+  padding-top: 25px;
   font-family: monospace;
   color: black;
-  border: 1px solid black;
-  border-radius: 5px;
 }
 
 .same_line {
@@ -78,8 +76,14 @@ body {
 
 p {
   font-family: monospace;
+  font-size: 15px;
   color: black;
   padding: 20px;
+  margin-left: 30px;
+  margin-top: 0px;
+  width: 700px;
+  background-color: rgb(230,140,140);
+  border-radius: 3px;
 }
 
 span {
@@ -91,7 +95,8 @@ span {
 
 img {
   height: 300px;
-  width: 300px;
+  width: 500px;
   display: block;
   margin: 0 auto;
+  padding-bottom: 25px;
 }
