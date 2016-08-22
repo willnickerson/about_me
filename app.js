@@ -96,10 +96,9 @@ function fifthQuestion() {
   smokeAnswer = smokeAnswer.toUpperCase();
 
   if (smokeAnswer === 'YES' || smokeAnswer === 'Y') {
-    alert('No I can\'t :( Thanks for reminding me that I\'m trapped inside of a computer. Nevertheless, I appreciate you taking the time to talk with me');
-    console.log('The user is incorrect.');
+    alert('Of course not! Im trying to improve my health.');
   } else if (smokeAnswer === 'NO' || smokeAnswer === 'N') {
-    alert('Sadly you are correct :-( unfortunately I am stuck inside of a computer. Thanks for taking the time to chat with me.');
+    alert('Sadly you are correct :-( As much as I love nicotine, I\'ve got my lungs to think about.');
     console.log('The user is correct.');
     fxnCounter();
   } else {
@@ -194,7 +193,7 @@ function seventhQuestion() {
 seventhQuestion();
 
 
-var score = (counter / 7) * 100;
+var score = Math.floor((counter / 7) * 100);
 score = score.toString();
 if (counter >= 4) {
   alert('You did great! I would be happy to call you a friend :-). You scored ' + score + '%');
